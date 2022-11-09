@@ -1,0 +1,53 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block content %}
+
+
+    {% include 'main/navbar.html'%}
+    
+    <div class="container">
+    <!-- Page Content goes here -->
+        <h1 class="center-align" >index page</h1> 
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <img class="materialboxed responsive-img" width="450" src="{% static '1500558.jpg'%}" alt = "Not Found">
+                <span class="card-title">Hitesh Pratap Singh</span>
+              </div>
+              <div class="card-action">
+                <a href="#">Github</a>
+                <a href="#">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m8">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title">About Me</span>
+                <p>
+                python developer and knows little js &#128512
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+             
+    
+{% endblock %}
+
+{% block script %}
+
+    <script>
+      var inDuration = 27
+          document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems, inDuration);
+      });
+      
+    </script>
+
+{% endblock %}
+
